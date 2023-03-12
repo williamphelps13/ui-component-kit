@@ -1,6 +1,6 @@
 <script lang="ts">
-  import './page.css';
-  import Header from './Header.svelte';
+  import './MainPage.css';
+  import Header from '../../navs/Header/Header.svelte';
 
   let user: { name: string } | null = null;
 </script>
