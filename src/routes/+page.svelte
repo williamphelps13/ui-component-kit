@@ -1,5 +1,5 @@
 <script>
-	import Button from '../lib/stories/Button.svelte';
+	import Button from '../lib/components/Button.svelte';
 </script>
 
 <h1>Welcome to your library project</h1>
