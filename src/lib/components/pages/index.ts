@@ -1,1 +1,1 @@
-export { default as MainPage} from './MainPage/MainPage.svelte'
+export { default as MainPage } from './MainPage/MainPage.svelte';
