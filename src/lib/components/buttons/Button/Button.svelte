@@ -1,5 +1,5 @@
 <script lang="ts">
-  import './button.css';
+  import './button.scss';
 
   export let primary = false;
   export let size: 'small' | 'medium' | 'large' = 'medium';
