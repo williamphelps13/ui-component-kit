@@ -1,5 +1,5 @@
 <script lang="ts">
-  import './mainPage.css';
+  import './mainPage.scss';
   import Header from '../../navs/Header/Header.svelte';
 
   let user: { name: string } | null = null;
@@ -14,7 +14,10 @@
   />
 
   <section>
-    <h2>Pages in Storybook</h2>
+    <h1>Large Page</h1>
+    <h2>Medium Page</h2>
+    <h3>Small Page</h3>
+    <h4>Very Small</h4>
     <p>
       We recommend building UIs with a
       <a
