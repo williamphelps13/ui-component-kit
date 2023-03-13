@@ -56,6 +56,10 @@
         "value": "#6b7280",
         "type": "color",
         "description": "option.color.gray"
+      },
+      "green": {
+        "value": "#5cdb5c",
+        "type": "color"
       }
     }
   },
