@@ -1,4 +1,19 @@
-/* Variables and mixins declared here will be available in all other SCSS files */
+/**
+ * Do not edit directly
+ * Generated on Mon, 13 Mar 2023 16:07:08 GMT
+ */
+
 :root {
-  --btn-primary-bg: rgb(42, 36, 156);
+  --btn-primary-c: #FFFFFF;
+  --btn-primary-border-c: transparent;
+  --btn-primary-bg: #00afc2;
+  --btn-secondary-c: #00afc2;
+  --btn-secondary-border-c: #6b7280;
+  --btn-secondary-bg: transparent;
+  --option-color-white: #FFFFFF;
+  --option-color-transparent: transparent;
+  --option-color-teal: #00afc2;
+  --option-color-gray: #6b7280;
+  --token-set-order-0: options;
+  --token-set-order-1: buttons;
 }

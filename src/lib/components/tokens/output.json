@@ -1,0 +1,72 @@
+{
+  "btn": {
+    "primary": {
+      "c": {
+        "value": "{option.color.white}",
+        "type": "color",
+        "description": "option.color.white"
+      },
+      "border-c": {
+        "value": "{option.color.transparent}",
+        "type": "color",
+        "description": "option.color.transparent"
+      },
+      "bg": {
+        "value": "{option.color.teal}",
+        "type": "color",
+        "description": "option.color.teal"
+      }
+    },
+    "secondary": {
+      "c": {
+        "value": "{option.color.teal}",
+        "type": "color",
+        "description": "option.color.teal"
+      },
+      "border-c": {
+        "value": "{option.color.gray}",
+        "type": "color",
+        "description": "option.color.gray"
+      },
+      "bg": {
+        "value": "{option.color.transparent}",
+        "type": "color",
+        "description": "option.color.transparent"
+      }
+    }
+  },
+  "option": {
+    "color": {
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "option.color.white"
+      },
+      "transparent": {
+        "value": "transparent",
+        "type": "color",
+        "description": "option.transparent"
+      },
+      "teal": {
+        "value": "#00afc2",
+        "type": "color",
+        "description": "option.color.teal"
+      },
+      "gray": {
+        "value": "#6b7280",
+        "type": "color",
+        "description": "option.color.gray"
+      }
+    }
+  },
+  "tokenSetOrder": {
+    "0": {
+      "value": "options",
+      "type": "other"
+    },
+    "1": {
+      "value": "buttons",
+      "type": "other"
+    }
+  }
+}

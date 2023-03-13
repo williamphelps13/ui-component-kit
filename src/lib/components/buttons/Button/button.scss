@@ -1,8 +1,5 @@
-@use '../buttonsTokens.scss';
-
 .storybook-button {
   display: inline-block;
-  border: 0;
   border-radius: 3em;
   font-weight: 700;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -10,13 +7,15 @@
   cursor: pointer;
 }
 .storybook-button--primary {
+  border: 1px solid var(--btn-primary-border-c);
   background-color: var(--btn-primary-bg);
-  color: white;
+  color: var(--btn-primary-c);
 }
 .storybook-button--secondary {
-  background-color: transparent;
+  border: 1px solid var(--btn-secondary-border-c);
+  background-color: var(--btn-secondary-bg);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  color: #333;
+  color: var(--btn-secondary-c);
 }
 .storybook-button--small {
   padding: 10px 16px;
