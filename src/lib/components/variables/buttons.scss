@@ -1,18 +1,16 @@
+/**
+ * Do not edit directly
+ * Generated on Wed, 15 Mar 2023 21:36:37 GMT
+ */
+
 :root {
-  --option-color-gray: #6b7280;
-  --option-color-teal-300: #80f3ff;
-  --option-color-teal-700: #0093a3;
-  --option-color-transparent: transparent;
-  --option-color-white: #FFFFFF;
-  --btn-secondary-bg: var(--option-color-transparent);
-  --btn-secondary-border-c: var(--option-color-gray);
-  --btn-secondary-c: var(--option-color-teal-700);
-  --btn-primary-bg: var(--option-color-teal-700);
-  --btn-primary-border-c: var(--option-color-transparent);
   --btn-primary-c: var(--option-color-white);
+  --btn-primary-border-c: var(--option-color-transparent);
+  --btn-secondary-border-c: var(--option-color-gray);
+  --btn-secondary-bg: var(--option-color-transparent);
 }
 
 .theme-dark {
-  --btn-secondary-c: var(--option-color-teal-300);
   --btn-primary-bg: var(--option-color-teal-300);
+  --btn-secondary-c: var(--option-color-teal-300); 
 }

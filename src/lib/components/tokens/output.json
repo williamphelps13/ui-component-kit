@@ -1,37 +1,37 @@
 {
   "btn": {
     "primary": {
+      "bg": {
+        "value": "{option.color.teal-300}",
+        "type": "color",
+        "description": "option.color.teal-300/dark/buttons"
+      },
       "c": {
         "value": "{option.color.white}",
         "type": "color",
-        "description": "option.color.white"
+        "description": "option.color.white/light/buttons"
       },
       "border-c": {
         "value": "{option.color.transparent}",
         "type": "color",
-        "description": "option.color.transparent"
-      },
-      "bg": {
-        "value": "{option.color.teal}",
-        "type": "color",
-        "description": "option.color.teal"
+        "description": "option.color.transparent/light/buttons"
       }
     },
     "secondary": {
       "c": {
-        "value": "{option.color.teal}",
+        "value": "{option.color.teal-300}",
         "type": "color",
-        "description": "option.color.teal"
+        "description": "option.color.teal-300/dark/buttons"
       },
       "border-c": {
         "value": "{option.color.gray}",
         "type": "color",
-        "description": "option.color.gray"
+        "description": "option.color.gray/light/buttons"
       },
       "bg": {
         "value": "{option.color.transparent}",
         "type": "color",
-        "description": "option.color.transparent"
+        "description": "option.color.transparent/light/buttons"
       }
     }
   },
@@ -40,26 +40,27 @@
       "white": {
         "value": "#FFFFFF",
         "type": "color",
-        "description": "option.color.white"
+        "description": "#FFFFFF/options"
       },
       "transparent": {
         "value": "transparent",
         "type": "color",
-        "description": "option.transparent"
+        "description": "transparent/options"
       },
-      "teal": {
-        "value": "#00afc2",
+      "teal-300": {
+        "value": "#80f3ff",
         "type": "color",
-        "description": "option.color.teal"
+        "description": "#80f3ff/options"
+      },
+      "teal-700": {
+        "value": "#0093a3",
+        "type": "color",
+        "description": "#0093a3/options"
       },
       "gray": {
         "value": "#6b7280",
         "type": "color",
-        "description": "option.color.gray"
-      },
-      "green": {
-        "value": "#5cdb5c",
-        "type": "color"
+        "description": "#6b7280/options"
       }
     }
   },
@@ -69,7 +70,11 @@
       "type": "other"
     },
     "1": {
-      "value": "buttons",
+      "value": "light/components/buttons",
+      "type": "other"
+    },
+    "2": {
+      "value": "dark/components/buttons",
       "type": "other"
     }
   }

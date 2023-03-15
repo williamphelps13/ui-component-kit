@@ -1,8 +1,9 @@
 const StyleDictionary = require('style-dictionary');
 const { fileHeader } = StyleDictionary.formatHelpers;
 
-const tokenFilter = (cat) => (token) => token.attributes.category.includes(cat);
-const categories = ['options', 'buttons'];
+const categories = ['options', 'semantics', 'buttons', 'containers'];
+const tokenFilter = (cat) => (token) => token.description?.includes(cat);
+
 const createFilesArray = categories.map((cat) => {
   return {
     filter: tokenFilter(cat),
@@ -13,7 +14,7 @@ const createFilesArray = categories.map((cat) => {
 });
 
 module.exports = {
-  source: ['src/lib/components/tokens/tokens.json'],
+  source: ['src/lib/components/tokens/output.json'],
   format: {
     cssThemed: ({ dictionary, file }) => {
       let output = fileHeader(file);
@@ -22,33 +23,22 @@ module.exports = {
       const dark = [];
 
       dictionary.allTokens.forEach((token) => {
-        const { path, original } = token;
-        const [first, ...restPath] = path;
-        const name = restPath.join('-');
+        const { path, original, description } = token;
+        const cleanedValue = original.value.replace(/[{}]/g, '').replace(/[\.]/g, '-');
 
-        if (first === 'options') {
-          light.push(`--${name}: ${original.value};`);
-        } else if (first.includes('light')) {
-          light.push(
-            `--${name}: var(--${original.value.substring(
-              original.value.indexOf('.') + 1,
-              original.value.length - 1
-            )});`
-          );
-        } else if (first.includes('dark')) {
-          dark.push(
-            `--${name}: var(--${original.value.substring(
-              original.value.indexOf('.') + 1,
-              original.value.length - 1
-            )});`
-          );
+        if (description.includes('options')) {
+          light.push(`--${path.join('-')}: ${cleanedValue};`);
+        } else if (description.includes('light')) {
+          light.push(`--${path.join('-')}: var(--${cleanedValue});`);
+        } else if (description.includes('dark')) {
+          dark.push(`--${path.join('-')}: var(--${cleanedValue});`);
         }
       });
 
       const lightText = `:root {\n  ${light.join('\n  ')}\n}\n`;
-      const darkText = `.theme-dark {\n  ${dark.join('\n  ')} \n}`;
-      output += `${lightText}${dark.length ? darkText : ''}`;
+      const darkText = `\n.theme-dark {\n  ${dark.join('\n  ')} \n}`;
 
+      output += `${lightText}${dark.length ? darkText : ''}`;
       return output;
     }
   },
