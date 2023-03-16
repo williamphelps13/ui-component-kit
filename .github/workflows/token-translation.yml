@@ -1,0 +1,26 @@
+name: Transform the Design Tokens JSON file into a file of CSS Variables for each component group
+on: pull_request
+jobs:
+  run_if:
+    if: "${{ github.head_ref == 'tokens-studio' }}"
+    name: Translate Design Tokens
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@master
+        with:
+          repository: '${{ github.event.pull_request.head.repo.full_name }}'
+          ref: '${{ github.event.pull_request.head.ref }}'
+      - name: Install Dependencies
+        run: npm install
+      - name: Run token-transformer
+        run: npx token-transformer src/lib/components/tokens/tokens.json src/lib/components/tokens/output.json --resolveReferences false
+      - name: Run style-dictionary
+        run: npx style-dictionary build --config src/lib/components/tokens/sdconfig.cjs
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: William Phelps
+          author_email: williamphelps13@gmail.com
+          message: 'chore: transform design tokens into css variables'
+          add: '.'
