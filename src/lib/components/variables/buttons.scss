@@ -1,0 +1,16 @@
+/**
+ * Do not edit directly
+ * Generated on Wed, 15 Mar 2023 21:36:37 GMT
+ */
+
+:root {
+  --btn-primary-c: var(--option-color-white);
+  --btn-primary-border-c: var(--option-color-transparent);
+  --btn-secondary-border-c: var(--option-color-gray);
+  --btn-secondary-bg: var(--option-color-transparent);
+}
+
+.theme-dark {
+  --btn-primary-bg: var(--option-color-teal-300);
+  --btn-secondary-c: var(--option-color-teal-300); 
+}

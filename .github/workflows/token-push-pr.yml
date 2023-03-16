@@ -1,0 +1,20 @@
+name: Create PR on Push from Tokens Studio
+on: push
+    branches:
+    - tokens-studio
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Create PR on Push from Tokens Studio
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: main
+        pr_title: Tokens Studio - Updated Tokens
+        pr_body: 'Design Tokens were updated in Figma which triggered a Github Action
+          to create this PR. This PR triggers another Github action that has 2 steps:
+          1. Transforms the Figma Tokens input (tokens.json) to a slightly different
+          format that can be accepted by the style-dictionary 2. The style-dictionary
+          transforms that json into multiple global scss variable files'
+        github_token: "${{ secrets.TOKENS_STUDIO_TOKEN }}"

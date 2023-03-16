@@ -88,5 +88,9 @@
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
-	"_id": "ui-component-kit@0.0.2"
+	"_id": "ui-component-kit@0.0.2",
+	"dependencies": {
+		"style-dictionary": "^3.7.2",
+		"token-transformer": "^0.0.30"
+	}
 }
