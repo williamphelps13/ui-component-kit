@@ -11,12 +11,8 @@ jobs:
         with:
           repository: '${{ github.event.pull_request.head.repo.full_name }}'
           ref: '${{ github.event.pull_request.head.ref }}'
-      - name: Install Dependencies
-        run: npm install
-      - name: Run token-transformer
-        run: npx token-transformer src/lib/components/tokens/tokens.json src/lib/components/tokens/output.json --resolveReferences false
-      - name: Run style-dictionary
-        run: npx style-dictionary build --config src/lib/components/tokens/sdconfig.cjs
+      - name: Run JSON to CSS Variables Script
+        # run:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
