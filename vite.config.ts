@@ -13,6 +13,13 @@ export default defineConfig({
     }
   },
   test: {
-    // ...
+    testTimeout: 10000,
+    globals: true,
+    reporters: ['verbose'],
+    outputFile: './tests/report.html',
+    coverage: {
+      reporter: ['text', 'html'],
+      reportsDirectory: './tests/coverage'
+    }
   }
 });

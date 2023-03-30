@@ -38,7 +38,10 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=746945f89553",
-    "test": "vitest --globals"
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --run --coverage"
   },
   "exports": {
     ".": {
@@ -64,6 +67,8 @@
     "@sveltejs/kit": "^1.5.0",
     "@sveltejs/package": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@vitest/coverage-c8": "^0.29.7",
+    "@vitest/ui": "^0.29.7",
     "chromatic": "^6.17.1",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
